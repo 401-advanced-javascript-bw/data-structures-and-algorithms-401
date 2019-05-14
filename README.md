@@ -13,3 +13,5 @@ Write a function called `reverseArray` which takes an array as an argument. Retu
 I used a for loop starting from the end of the array and appending each item to an empty array, decreasing the position of i each time.
 
 ## Solution
+
+![](./images/codechallenge-1.jpg)
