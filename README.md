@@ -51,3 +51,15 @@ I looped through the array and saw if each of the elements matched the key. If t
 ## Solution
 
 ![](./images/challenge-3.jpg)
+
+#4. Linked List
+
+Create link list that implements the folllowing:
+
+- inserts nodes at the beginning of the list.
+- checks to see if the list contains a value. (return true is exists, false if doesn't exist)
+- prints values of the list.
+
+# modules:
+
+`node.js linked-list.js`
