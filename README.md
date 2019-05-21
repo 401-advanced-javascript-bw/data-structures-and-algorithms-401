@@ -52,7 +52,7 @@ I looped through the array and saw if each of the elements matched the key. If t
 
 ![](./images/challenge-3.jpg)
 
-#4. Linked List
+# 4. Linked List
 
 Create link list that implements the folllowing:
 
@@ -63,3 +63,15 @@ Create link list that implements the folllowing:
 # modules:
 
 `node.js linked-list.js`
+
+# 5. Linked List Insertions
+
+Add to linked list module
+
+## Challenge
+
+Add to the linked list by creating methods called append (adds value to end of linked list), insertBefore(inserts value immediately before specified input value), and insertAfter (inserts value immediately after specified input value).
+
+Jag, Jesse, Melissa, Becky, and I all worked together on this challenge. We looped through the node list for all of the methods and stop at the right place to insert the node. We then redirect the pointers to point to the correct node which puts them in the right order.
+
+![](./images/challenge-5.jpg)
