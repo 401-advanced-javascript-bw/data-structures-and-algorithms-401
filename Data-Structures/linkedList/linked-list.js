@@ -36,8 +36,38 @@ class LinkedList {
       thisNode = thisNode.next;
       message += `${thisNode.data}`;
     }
-    // console.log(message);
     return message;
+  }
+
+  append(value) {
+    let current = this.head;
+    while (current.next !== null) {
+      current = current.next;
+    }
+    current.next = new Node(value);
+    current.next.next = null;
+  }
+
+  insertBefore(existingVal, newVal) {
+    let current = this.head;
+    while (current.next && current.next.data !== existingVal) {
+      let newNode = new Node(newVal);
+      newNode.next = current.next;
+      current.next = newNode;
+      return;
+    }
+    return 'Exception';
+  }
+
+  insertAfter(existingVal, newVal) {
+    let current = this.head;
+    while (current.value !== existingVal) {
+      let newNode = new Node(newVal);
+      newNode.next = current.next;
+      current.next = newNode;
+      return;
+    }
+    return 'Exception';
   }
 }
 
