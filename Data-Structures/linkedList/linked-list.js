@@ -5,11 +5,13 @@ const Node = require('../lib/node.js');
 class LinkedList {
   constructor() {
     this.head = null;
+    this.count = 0;
   }
 
   insert(value) {
     const newNode = new Node(value, this.head);
     this.head = newNode;
+    this.count++;
   }
 
   includes(value) {
@@ -41,26 +43,39 @@ class LinkedList {
 
   append(value) {
     let current = this.head;
+    if (!current) {
+      current = new Node(value);
+    }
     while (current.next !== null) {
       current = current.next;
     }
     current.next = new Node(value);
     current.next.next = null;
+    this.count++;
   }
 
   insertBefore(existingVal, newVal) {
     let current = this.head;
-    while (current.next && current.next.data !== existingVal) {
-      let newNode = new Node(newVal);
-      newNode.next = current.next;
-      current.next = newNode;
-      return;
+    this.count++;
+    // while (current.next && current.next.data !== existingVal) {
+    //   let newNode = new Node(newVal);
+    //   newNode.next = current.next;
+    //   current.next = newNode;
+    //   return;
+    // }
+
+    while (current.data !== existingVal) {
+      current = current.next;
     }
-    return 'Exception';
+    let newNode = new Node(newVal);
+    newNode.next = current.next;
+    current.next = current.next.next;
+    // return 'Exception';
   }
 
   insertAfter(existingVal, newVal) {
     let current = this.head;
+    this.count;
     while (current.value !== existingVal) {
       let newNode = new Node(newVal);
       newNode.next = current.next;
@@ -68,6 +83,22 @@ class LinkedList {
       return;
     }
     return 'Exception';
+  }
+
+  valueFromEnd(value) {
+    if (this.head === null) {
+      return null;
+    }
+    let slow = this.head;
+    let fast = this.head;
+    for (let i = 0; i < value + 1; i++) {
+      fast = fast.next;
+    }
+    while (fast !== null) {
+      slow = slow.nex;
+      fast = fast.next;
+    }
+    return slow.data;
   }
 }
 

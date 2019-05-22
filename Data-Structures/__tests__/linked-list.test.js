@@ -53,4 +53,21 @@ describe('linked list', () => {
     const list = new linkedList();
     expect(list.head).toBeNull();
   });
+
+  it('Value can be inserted at the end of linked list', () => {
+    const list = new linkedList();
+    list.insert(2);
+    list.append(4);
+    expect(list.count).toEqual(2);
+    expect(list.head.next.data).toEqual(4);
+  });
+
+  it('Value can be inserted before specified value', () => {
+    const list = new linkedList();
+    list.insert(2);
+    list.insert(3);
+    list.insert(4);
+    list.insertBefore(3, 2);
+    expect(list.head.next.data).toEqual(2);
+  });
 });
