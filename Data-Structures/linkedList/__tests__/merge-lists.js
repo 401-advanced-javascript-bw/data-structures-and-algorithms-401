@@ -1,7 +1,7 @@
 'use strict';
 
-const LinkedList = require('../linkedList/linked-list.js');
-const mergeLists = require('../linkedList/merge-lists.js');
+const LinkedList = require('../linked-list.js');
+const mergeLists = require('../merge-lists.js');
 
 describe('merge linked lists', () => {
   it('should merge two linked lists', () => {

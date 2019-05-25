@@ -1,6 +1,6 @@
 'use strict';
 
-const linkedList = require('../linkedList/linked-list.js');
+const linkedList = require('../linked-list.js');
 
 describe('linked list', () => {
   it('should insert a new node', () => {
