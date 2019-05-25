@@ -22,7 +22,6 @@
   "homepage": "https://github.com/401-advanced-javascript-bw/data-structures-and-algorithms-401#readme",
   "dependencies": {
     "eslint": "^5.16.0",
-    "jest": "^24.8.0",
-    "testURL": "http://localhost/"
+    "jest": "^24.8.0"
   }
 }
