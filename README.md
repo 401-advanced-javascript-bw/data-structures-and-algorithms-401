@@ -143,3 +143,20 @@ Returns the deleted value, removes value at the front of the queue.
 ### `queue.peek`
 
 Returns and "peeks" at the value at the front of the queue.
+
+# 11. Queue with Stacks
+
+enqueu and dequeue with two stacks
+
+## Challenge
+
+Create a brand new PseudoQueue class. Do not use an existing Queue. Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below), but will internally only utilize 2 Stack objects. Ensure that you create your class with the following methods:
+
+enqueue(value) which inserts value into the PseudoQueue, using a first-in, first-out approach.
+dequeue() which extracts a value from the PseudoQueue, using a first-in, first-out approach.
+The Stack instances have only push, pop, and peek methods. You should use your own Stack implementation. Instantiate these Stack objects in your PseudoQueue constructor.
+
+## Approach & Efficiency
+
+First I declared two empty stacks. For queue, I pushed into the first stack. For dequeue, I pushed the items into the second stack to reverse it then used pop.
+![](./images/challenge-11.jpg)
