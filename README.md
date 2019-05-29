@@ -144,9 +144,9 @@ Returns the deleted value, removes value at the front of the queue.
 
 Returns and "peeks" at the value at the front of the queue.
 
-# 11. stacks and queues
+# 11. Queue with Stacks
 
-Merge two linked lists alternatively
+enqueu and dequeue with two stacks
 
 ## Challenge
 
@@ -158,6 +158,5 @@ The Stack instances have only push, pop, and peek methods. You should use your o
 
 ## Approach & Efficiency
 
-First I declared list 1 and list 2's currents. Then declared list 1's next and list 2's next to keep track of the next after alternating. While list 1 and list 2 weren't null, I directed the pointers accordingly.
-
+First I declared two empty stacks. For queue, I pushed into the first stack. For dequeue, I pushed the items into the second stack to reverse it then used pop.
 ![](./images/challenge-11.jpg)
