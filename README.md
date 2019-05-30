@@ -161,3 +161,20 @@ The Stack instances have only push, pop, and peek methods. You should use your o
 First I declared list 1 and list 2's currents. Then declared list 1's next and list 2's next to keep track of the next after alternating. While list 1 and list 2 weren't null, I directed the pointers accordingly.
 
 ![](./images/challenge-11.jpg)
+
+# 12. stacks and queues
+
+Create animal shelter class using queues
+
+## Challenge
+
+Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
+Implement the following methods:
+enqueue(animal): adds animal to the shelter. animal can be either a dog or a cat object.
+dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then return null.
+
+## Approach & Efficiency
+
+I used two queues one for cats and one for dogs. To enqueue, I pushed according to the input value of cat or dog to their respective queques. To dequeue, I checked the input value then returned the correct queue's end object.
+
+![](./images/challenge-12.jpg)
