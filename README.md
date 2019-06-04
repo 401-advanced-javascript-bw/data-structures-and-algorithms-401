@@ -162,7 +162,7 @@ First I declared list 1 and list 2's currents. Then declared list 1's next and l
 
 ![](./images/challenge-11.jpg)
 
-# 12. stacks and queues
+# 12. Animal Shelter
 
 Create animal shelter class using queues
 
@@ -178,3 +178,22 @@ dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then
 I used two queues one for cats and one for dogs. To enqueue, I pushed according to the input value of cat or dog to their respective queques. To dequeue, I checked the input value then returned the correct queue's end object.
 
 ![](./images/challenge-12.jpg)
+
+# 13. FizzBuzz Tree
+
+Implement fizzbuzz on tree
+
+## Challenge
+
+Write a function called FizzBuzzTree which takes a tree as an argument.
+Without utilizing any of the built-in methods available to your language, determine weather or not the value of each node is divisible by 3, 5 or both, and change the value of each of the nodes:
+If the value is divisible by 3, replace the value with “Fizz”
+If the value is divisible by 5, replace the value with “Buzz”
+If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
+Return the tree with its new values.
+
+## Approach & Efficiency
+
+I traversed the tree with preorder and first checked if the value of the node is a number. I did this recursively by setting the base case to were the root's value equals null. Then I called the functions if the left and right values existed. While traversing, I can the fizzbuzz function and return the appropriate value of 'fizz', 'buzz', or 'fizzbuzz'.
+
+![](./images/challenge-13.jpg)
