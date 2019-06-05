@@ -197,3 +197,17 @@ Return the tree with its new values.
 I traversed the tree with preorder and first checked if the value of the node is a number. I did this recursively by setting the base case to were the root's value equals null. Then I called the functions if the left and right values existed. While traversing, I can the fizzbuzz function and return the appropriate value of 'fizz', 'buzz', or 'fizzbuzz'.
 
 ![](./images/challenge-13.jpg)
+
+# 14. Depth of value
+
+Find depth of given value in tree
+
+## Challenge
+
+Return the depth of a given node in a binary tree :) If the value doesn't exist, return null.
+
+## Approach & Efficiency
+
+Set base cases for when value doesn't exist/when value is not number and when the value equals root value. Traverse the tree with preorder and store the depth as a parameter. At the end of the function, return left or right to make sure both sides of the tree are being checked.
+
+![](./images/challenge-14.jpg)
