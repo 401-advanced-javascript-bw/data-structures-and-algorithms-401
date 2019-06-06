@@ -1,4 +1,5 @@
 'use strict';
+const { Queue } = require('../stacksAndQueues');
 
 class Node {
   constructor(value) {
@@ -50,6 +51,23 @@ class BinaryTree {
     tree.push(node.data);
 
     return tree;
+  }
+  greatestValue() {
+    const queue = new Queue();
+    let greatest = this.root.value;
+    while (queue.length > 0) {
+      this.root = queue.dequeue();
+      if (this.root.value > greatest) {
+        greatest = this.root.value;
+      }
+      if (this.root.left) {
+        queue.enqueue(this.root.left);
+      }
+      if (this.root.right) {
+        queue.enqueue(this.root.right);
+      }
+    }
+    return greatest;
   }
 }
 

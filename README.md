@@ -211,3 +211,17 @@ Return the depth of a given node in a binary tree :) If the value doesn't exist,
 Set base cases for when value doesn't exist/when value is not number and when the value equals root value. Traverse the tree with preorder and store the depth as a parameter. At the end of the function, return left or right to make sure both sides of the tree are being checked.
 
 ![](./images/challenge-14.jpg)
+
+# 15. Greatest Value in tree
+
+Find the greatest value in a binary tree
+
+## Challenge
+
+Write a function called find-maximum-value which takes binary tree as its only input. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+
+## Approach & Efficiency
+
+Using breadth first traversal, I enqueue the root of the tree and traverse while enqueing and dequeuing. I set a while loop and set the condition to where the length of the queue must be greater than 0. Set the root of the tree to the dequeued value and check if the left and the right of the tree exist. If they do, enqueue and repeat the process. In the end, return the greatest value.
+
+![](./images/challenge-15.jpg)
