@@ -225,3 +225,17 @@ Write a function called find-maximum-value which takes binary tree as its only i
 Using breadth first traversal, I enqueue the root of the tree and traverse while enqueing and dequeuing. I set a while loop and set the condition to where the length of the queue must be greater than 0. Set the root of the tree to the dequeued value and check if the left and the right of the tree exist. If they do, enqueue and repeat the process. In the end, return the greatest value.
 
 ![](./images/challenge-15.jpg)
+
+# 16. Reverse Array in Three Ways
+
+Reverse an array in three different ways
+
+## Challenge
+
+Reverse an array in three different ways
+
+## Approach & Efficiency
+
+I used recursion, reduce, for loop/ push to new array, and the reverse method.
+
+![](./images/challenge-16.jpg)

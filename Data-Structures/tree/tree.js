@@ -1,5 +1,5 @@
 'use strict';
-const { Queue } = require('../stacksAndQueues');
+const Queue = require('../stacksAndQueues/stacks-and-queues.js').Queue;
 
 class Node {
   constructor(value) {
