@@ -143,3 +143,99 @@ Returns the deleted value, removes value at the front of the queue.
 ### `queue.peek`
 
 Returns and "peeks" at the value at the front of the queue.
+
+# 11. stacks and queues
+
+Merge two linked lists alternatively
+
+## Challenge
+
+Create a brand new PseudoQueue class. Do not use an existing Queue. Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below), but will internally only utilize 2 Stack objects. Ensure that you create your class with the following methods:
+
+enqueue(value) which inserts value into the PseudoQueue, using a first-in, first-out approach.
+dequeue() which extracts a value from the PseudoQueue, using a first-in, first-out approach.
+The Stack instances have only push, pop, and peek methods. You should use your own Stack implementation. Instantiate these Stack objects in your PseudoQueue constructor.
+
+## Approach & Efficiency
+
+First I declared list 1 and list 2's currents. Then declared list 1's next and list 2's next to keep track of the next after alternating. While list 1 and list 2 weren't null, I directed the pointers accordingly.
+
+![](./images/challenge-11.jpg)
+
+# 12. Animal Shelter
+
+Create animal shelter class using queues
+
+## Challenge
+
+Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
+Implement the following methods:
+enqueue(animal): adds animal to the shelter. animal can be either a dog or a cat object.
+dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then return null.
+
+## Approach & Efficiency
+
+I used two queues one for cats and one for dogs. To enqueue, I pushed according to the input value of cat or dog to their respective queques. To dequeue, I checked the input value then returned the correct queue's end object.
+
+![](./images/challenge-12.jpg)
+
+# 13. FizzBuzz Tree
+
+Implement fizzbuzz on tree
+
+## Challenge
+
+Write a function called FizzBuzzTree which takes a tree as an argument.
+Without utilizing any of the built-in methods available to your language, determine weather or not the value of each node is divisible by 3, 5 or both, and change the value of each of the nodes:
+If the value is divisible by 3, replace the value with “Fizz”
+If the value is divisible by 5, replace the value with “Buzz”
+If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
+Return the tree with its new values.
+
+## Approach & Efficiency
+
+I traversed the tree with preorder and first checked if the value of the node is a number. I did this recursively by setting the base case to were the root's value equals null. Then I called the functions if the left and right values existed. While traversing, I can the fizzbuzz function and return the appropriate value of 'fizz', 'buzz', or 'fizzbuzz'.
+
+![](./images/challenge-13.jpg)
+
+# 14. Depth of value
+
+Find depth of given value in tree
+
+## Challenge
+
+Return the depth of a given node in a binary tree :) If the value doesn't exist, return null.
+
+## Approach & Efficiency
+
+Set base cases for when value doesn't exist/when value is not number and when the value equals root value. Traverse the tree with preorder and store the depth as a parameter. At the end of the function, return left or right to make sure both sides of the tree are being checked.
+
+![](./images/challenge-14.jpg)
+
+# 15. Greatest Value in tree
+
+Find the greatest value in a binary tree
+
+## Challenge
+
+Write a function called find-maximum-value which takes binary tree as its only input. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+
+## Approach & Efficiency
+
+Using breadth first traversal, I enqueue the root of the tree and traverse while enqueing and dequeuing. I set a while loop and set the condition to where the length of the queue must be greater than 0. Set the root of the tree to the dequeued value and check if the left and the right of the tree exist. If they do, enqueue and repeat the process. In the end, return the greatest value.
+
+![](./images/challenge-15.jpg)
+
+# 16. Reverse Array in Three Ways
+
+Reverse an array in three different ways
+
+## Challenge
+
+Reverse an array in three different ways
+
+## Approach & Efficiency
+
+I used recursion, reduce, for loop/ push to new array, and the reverse method.
+
+![](./images/challenge-16.jpg)
