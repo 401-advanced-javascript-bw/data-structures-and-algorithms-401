@@ -226,7 +226,7 @@ Using breadth first traversal, I enqueue the root of the tree and traverse while
 
 ![](./images/challenge-15.jpg)
 
-# 16. Reverse Array in Three Ways
+# 16. Reverse Array
 
 Reverse an array in three different ways
 
@@ -239,3 +239,21 @@ Reverse an array in three different ways
 I used recursion, reduce, for loop/ push to new array, and the reverse method.
 
 ![](./images/challenge-16.jpg)
+
+# 17. Second Largest Value
+
+Find the second largest value
+
+## Challenge
+
+Find the second largest value in a given array in three different ways.
+
+## Approach & Efficiency
+
+Method one: Use a set to remove duplicate arrays then turn it into an array, find the largest value in the array and delete it, then find the max value in the nex array. Con: this method takes more space since it is using a set, and an array, altering the array.
+
+Method two: Sort the values from least to greatest and return the second to last value. Pro: Quick and clean code. Con: Sorting takes longer since it is altering the array each time.
+
+Method three: Delcare two variables, a biggest and a nextBiggest. Loop through the array and if the value is greater than biggest, set the value to biggest and set biggest to next biggest. Else if the value doesn't equal the biggest and it is greater than next biggest, set the value to next biggest. Pro: this is the most efficient way with time of O(n) and space of O(1).
+
+![](./images/challenge-17.jpg)
