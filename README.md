@@ -257,3 +257,19 @@ Method two: Sort the values from least to greatest and return the second to last
 Method three: Delcare two variables, a biggest and a nextBiggest. Loop through the array and if the value is greater than biggest, set the value to biggest and set biggest to next biggest. Else if the value doesn't equal the biggest and it is greater than next biggest, set the value to next biggest. Pro: this is the most efficient way with time of O(n) and space of O(1).
 
 ![](./images/challenge-17.jpg)
+
+# 18. Two Values Sum
+
+Find two values that sum to given value
+
+## Challenge
+
+Given an array and a value, return an array of two values that result in the sum of the given value.
+
+## Approach & Efficiency
+
+Method one: Declared sumOne and sumTwo variables to keep track of sums. Used a nested for loop to check each index against the rest of the array to see if the sum of the index and the rest of the index equal the given value. Pro: Does not take up much space, Con: the time is O(n) squared because of the nested loop.
+
+Method two: Use a loop and at each index, check the difference between the value of the index and the given value. If the array includes the difference value, return that value and the value at the index being looped through as an array. Pro: Does not take up space and faster fun time.
+
+![](./images/challenge-18.jpg)

@@ -91,7 +91,7 @@ class BinarySearchTree extends BinaryTree {
       this.root.value = this.root.value.right;
       this.contains(this.root.value.right);
     } else if (value < this.root.value) {
-      this.roote.value = this.root.value.left;
+      this.root.value = this.root.value.left;
       this.contains(this.root.value.left);
     }
     return result;
