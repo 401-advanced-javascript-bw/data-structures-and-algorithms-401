@@ -273,3 +273,31 @@ Method one: Declared sumOne and sumTwo variables to keep track of sums. Used a n
 Method two: Use a loop and at each index, check the difference between the value of the index and the given value. If the array includes the difference value, return that value and the value at the index being looped through as an array. Pro: Does not take up space and faster fun time.
 
 ![](./images/challenge-18.jpg)
+
+# Hashtables
+
+Hashtables are a data structure that utilize key value pairs. This means every Node or Bucket has both a key, and a value.
+
+The basic idea of a hashtable is the ability to store the key into this data structure, and quickly retrieve the value. This is done through what we call a hash. A hash is the ability to encode the key that will eventually map to a specific location in the data structure that we can look at directly to retrieve the value.
+
+Since we are able to hash our key and determine the exact location where our value is stored, we can do a lookup in an O(1) time complexity. This is ideal when quick lookups are required.
+
+## Challenge
+
+Implement a Hashtable with the following methods:
+
+add: takes in both the key and value. This method should hash the key, and add the key and value pair to the table, handling collisions as needed.
+get: takes in the key and returns the value from the table.
+contains: takes in the key and returns a boolean, indicating if the key exists in the table already.
+hash: takes in an arbitrary key and returns an index in the collection.
+
+## Approach & Efficiency
+
+I set up the hashtable to store an array of objects starting with a length of 100. First it checks if the given key is a string and converts it into the sum of the ascii code of each letter. Then it multiplies the value by 599 and returns the modulus of 100 (length of data) as the index.
+
+## API
+
+`hash(key)` -> takes in value and returns an index
+`get(key)` -> gets the value at the given key
+`contains(key)` -> returns boolean based of whether or not key exists
+`add(key,value)` -> adds key value pair to table
