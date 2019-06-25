@@ -301,3 +301,17 @@ I set up the hashtable to store an array of objects starting with a length of 10
 `get(key)` -> gets the value at the given key
 `contains(key)` -> returns boolean based of whether or not key exists
 `add(key,value)` -> adds key value pair to table
+
+# 19. Find Tree Path
+
+Find the path between two values
+
+## Challenge
+
+Given a Binary tree and two values (A and B). Return a linked list representing the Path from A to B
+
+## Approach & Efficiency
+
+Use depth first method to traverse the tree. First find the starting value then add nodes to the linked list until the end value is found.
+
+![](./images/challenge-19.jpg)
