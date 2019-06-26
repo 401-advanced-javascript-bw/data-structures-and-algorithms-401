@@ -315,3 +315,18 @@ Given a Binary tree and two values (A and B). Return a linked list representing 
 Use depth first method to traverse the tree. First find the starting value then add nodes to the linked list until the end value is found.
 
 ![](./images/challenge-19.jpg)
+
+#20. Tree Intersection - collaborated with Jag, Melissa, Morgana, Becky, Jesse
+
+Find same values in two trees
+
+## Challenge
+
+Write a function called tree_intersection that takes two binary tree parameters.
+Without utilizing any of the built-in library methods available to your language, return a set of values found in both trees.
+
+## Approach & Efficiency
+
+Create a set out of the first tree and traverse the second tree, checking if the values of the node are contained in the set, while creating a new set of duplicate values.
+
+![](./images/challenge-20.jpg)
