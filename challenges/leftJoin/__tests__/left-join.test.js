@@ -21,7 +21,6 @@ describe('leftJoin', () => {
     table2.set('happy', 'sad');
 
     let result = leftJoin(table1, table2);
-    console.log(result[1][-1]);
-    expect(result[1][-1]).toBeNull();
+    expect(result[1].pop()).toBeNull();
   });
 });
