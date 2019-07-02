@@ -315,3 +315,17 @@ Given a Binary tree and two values (A and B). Return a linked list representing 
 Use depth first method to traverse the tree. First find the starting value then add nodes to the linked list until the end value is found.
 
 ![](./images/challenge-19.jpg)
+
+# 20. Find max and min ones - collaborated with Chris Kozlowski
+
+Find the row in a 2D array with the most and least number of 1s.
+
+## Challenge
+
+Given a 2D array where the rows are sorted and contain only 0 and 1. Return the index of the row with the biggest amount of zeroes, and the index of the row with the biggest amount of zeroes.
+
+## Approach & Efficiency
+
+We looped through the array and for each array, within that we made a while loop and performed a binary search on the sub array kept track of the min and max indexes, the high and low, as well as the resulting row.
+
+![](./images/challenge-20.jpg)
