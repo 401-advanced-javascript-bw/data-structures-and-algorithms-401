@@ -329,3 +329,17 @@ Given a 2D array where the rows are sorted and contain only 0 and 1. Return the 
 We looped through the array and for each array, within that we made a while loop and performed a binary search on the sub array kept track of the min and max indexes, the high and low, as well as the resulting row.
 
 ![](./images/challenge-20.jpg)
+
+# 21. El Salvador Flag - collaborated with Morgana, Jesse, and Joey
+
+Sort an array to resemble the El Salvador Flag
+
+## Challenge
+
+Given an array of any even number of blues and whites and one shield, rearrange the array so that it resembles the El Salvador flag: [blue, white, shield, white, blue].
+
+## Approach & Efficiency
+
+We declared the variables: Center (center point of array), leftBlueIndex, rightBlueIndex,blueCount, and index. In a while loop, we checked to see if the item at index is 'shield'. If it is, swap that to the center. Next we check if the value is blue. If it is, and blue count is odd, swap the value with rightBlueIndex. If it is odd, swap it with leftBlueIndex. If it is white, just incrememnt i. In the end return the array.,
+
+![](./images/challenge-21.jpg)
