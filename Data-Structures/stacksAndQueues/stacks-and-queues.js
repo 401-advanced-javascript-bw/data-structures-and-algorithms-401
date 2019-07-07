@@ -38,7 +38,6 @@ class Queue {
     this.rear = value;
     this.length++;
   }
-
   dequeue() {
     this.front =
       this.storage.length === 1 ? null : this.storage[this.storage.length - 1];
