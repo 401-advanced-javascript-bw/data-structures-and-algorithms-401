@@ -355,3 +355,15 @@ Check if a given chess board (given as a 2D Array) is in a checkmate state.
 Locate the king by looping through the 2D array, then call the knight and rook functions to see if the they can capture the king. I mapped out all the possible points the knight and rook can move in their individual functions.
 
 ![](./images/challenge-22.jpg)
+
+# 22. Dfs Graph Recursion
+
+## Challenge
+
+Create a function that accepts an adjacency list as a graph, and conducts a depth first traversal. Without utilizing any of the built-in methods available to your language, return a collection of nodes in their pre-order depth-first traversal order.
+
+## Approach & Efficiency
+
+Create a set and a current vertex which keeps track of the current values of the adjacency list. Set the base case to where the set has seen all the values of the list. Perform preorder by adding the current value to the set, then call the function again on each of the vertices.
+
+![](./images/challenge-23.jpg)
