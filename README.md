@@ -340,6 +340,18 @@ Given an array of any even number of blues and whites and one shield, rearrange 
 
 ## Approach & Efficiency
 
-We declared the variables: Center (center point of array), leftBlueIndex, rightBlueIndex,blueCount, and index. In a while loop, we checked to see if the item at index is 'shield'. If it is, swap that to the center. Next we check if the value is blue. If it is, and blue count is odd, swap the value with rightBlueIndex. If it is odd, swap it with leftBlueIndex. If it is white, just incrememnt i. In the end return the array.,
+We declared the variables: Center (center point of array), leftBlueIndex, rightBlueIndex,blueCount, and index. In a while loop, we checked to see if the item at index is 'shield'. If it is, swap that to the center. Next we check if the value is blue. If it is, and blue count is odd, swap the value with rightBlueIndex. If it is odd, swap it with leftBlueIndex. If it is white, just incrememnt i. In the end return the array.
 
 ![](./images/challenge-21.jpg)
+
+# 22. Chess Game
+
+## Challenge
+
+Check if a given chess board (given as a 2D Array) is in a checkmate state.
+
+## Approach & Efficiency
+
+Locate the king by looping through the 2D array, then call the knight and rook functions to see if the they can capture the king. I mapped out all the possible points the knight and rook can move in their individual functions.
+
+![](./images/challenge-22.jpg)
