@@ -367,3 +367,15 @@ Create a function that accepts an adjacency list as a graph, and conducts a dept
 Create a set and a current vertex which keeps track of the current values of the adjacency list. Set the base case to where the set has seen all the values of the list. Perform preorder by adding the current value to the set, then call the function again on each of the vertices.
 
 ![](./images/challenge-23.jpg)
+
+# 22. Graph Islands
+
+## Challenge
+
+Given a graph, check if it has any islands. Return true if it does and false if it doesn't.
+
+## Approach & Efficiency
+
+Make an array of the keys and set a variable equal to an empty array for the visited vertices. For each of the values in the graph, return false if any of them do not have values. Starting from the beginning of the adjacency list, first add the value of the key to the visited array then for each of the nodes in the linked list, add the current node value and call the function again to check the value of that key. In the end, compare the length of the keys array and the visited array and return true or false depending on if the lengths match.
+
+![](./images/challenge-24.jpg)
