@@ -53,7 +53,6 @@ class LinkedList {
     current.next.next = null;
     this.count++;
   }
-
   insertBefore(existingVal, newVal) {
     let current = this.head;
     this.count++;

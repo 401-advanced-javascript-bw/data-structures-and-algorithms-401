@@ -143,3 +143,239 @@ Returns the deleted value, removes value at the front of the queue.
 ### `queue.peek`
 
 Returns and "peeks" at the value at the front of the queue.
+
+# 11. stacks and queues
+
+Merge two linked lists alternatively
+
+## Challenge
+
+Create a brand new PseudoQueue class. Do not use an existing Queue. Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below), but will internally only utilize 2 Stack objects. Ensure that you create your class with the following methods:
+
+enqueue(value) which inserts value into the PseudoQueue, using a first-in, first-out approach.
+dequeue() which extracts a value from the PseudoQueue, using a first-in, first-out approach.
+The Stack instances have only push, pop, and peek methods. You should use your own Stack implementation. Instantiate these Stack objects in your PseudoQueue constructor.
+
+## Approach & Efficiency
+
+First I declared list 1 and list 2's currents. Then declared list 1's next and list 2's next to keep track of the next after alternating. While list 1 and list 2 weren't null, I directed the pointers accordingly.
+
+![](./images/challenge-11.jpg)
+
+# 12. Animal Shelter
+
+Create animal shelter class using queues
+
+## Challenge
+
+Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
+Implement the following methods:
+enqueue(animal): adds animal to the shelter. animal can be either a dog or a cat object.
+dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then return null.
+
+## Approach & Efficiency
+
+I used two queues one for cats and one for dogs. To enqueue, I pushed according to the input value of cat or dog to their respective queques. To dequeue, I checked the input value then returned the correct queue's end object.
+
+![](./images/challenge-12.jpg)
+
+# 13. FizzBuzz Tree
+
+Implement fizzbuzz on tree
+
+## Challenge
+
+Write a function called FizzBuzzTree which takes a tree as an argument.
+Without utilizing any of the built-in methods available to your language, determine weather or not the value of each node is divisible by 3, 5 or both, and change the value of each of the nodes:
+If the value is divisible by 3, replace the value with “Fizz”
+If the value is divisible by 5, replace the value with “Buzz”
+If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
+Return the tree with its new values.
+
+## Approach & Efficiency
+
+I traversed the tree with preorder and first checked if the value of the node is a number. I did this recursively by setting the base case to were the root's value equals null. Then I called the functions if the left and right values existed. While traversing, I can the fizzbuzz function and return the appropriate value of 'fizz', 'buzz', or 'fizzbuzz'.
+
+![](./images/challenge-13.jpg)
+
+# 14. Depth of value
+
+Find depth of given value in tree
+
+## Challenge
+
+Return the depth of a given node in a binary tree :) If the value doesn't exist, return null.
+
+## Approach & Efficiency
+
+Set base cases for when value doesn't exist/when value is not number and when the value equals root value. Traverse the tree with preorder and store the depth as a parameter. At the end of the function, return left or right to make sure both sides of the tree are being checked.
+
+![](./images/challenge-14.jpg)
+
+# 15. Greatest Value in tree
+
+Find the greatest value in a binary tree
+
+## Challenge
+
+Write a function called find-maximum-value which takes binary tree as its only input. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+
+## Approach & Efficiency
+
+Using breadth first traversal, I enqueue the root of the tree and traverse while enqueing and dequeuing. I set a while loop and set the condition to where the length of the queue must be greater than 0. Set the root of the tree to the dequeued value and check if the left and the right of the tree exist. If they do, enqueue and repeat the process. In the end, return the greatest value.
+
+![](./images/challenge-15.jpg)
+
+# 16. Reverse Array
+
+Reverse an array in three different ways
+
+## Challenge
+
+Reverse an array in three different ways
+
+## Approach & Efficiency
+
+I used recursion, reduce, for loop/ push to new array, and the reverse method.
+
+![](./images/challenge-16.jpg)
+
+# 17. Second Largest Value
+
+Find the second largest value
+
+## Challenge
+
+Find the second largest value in a given array in three different ways.
+
+## Approach & Efficiency
+
+Method one: Use a set to remove duplicate arrays then turn it into an array, find the largest value in the array and delete it, then find the max value in the nex array. Con: this method takes more space since it is using a set, and an array, altering the array.
+
+Method two: Sort the values from least to greatest and return the second to last value. Pro: Quick and clean code. Con: Sorting takes longer since it is altering the array each time.
+
+Method three: Delcare two variables, a biggest and a nextBiggest. Loop through the array and if the value is greater than biggest, set the value to biggest and set biggest to next biggest. Else if the value doesn't equal the biggest and it is greater than next biggest, set the value to next biggest. Pro: this is the most efficient way with time of O(n) and space of O(1).
+
+![](./images/challenge-17.jpg)
+
+# 18. Two Values Sum
+
+Find two values that sum to given value
+
+## Challenge
+
+Given an array and a value, return an array of two values that result in the sum of the given value.
+
+## Approach & Efficiency
+
+Method one: Declared sumOne and sumTwo variables to keep track of sums. Used a nested for loop to check each index against the rest of the array to see if the sum of the index and the rest of the index equal the given value. Pro: Does not take up much space, Con: the time is O(n) squared because of the nested loop.
+
+Method two: Use a loop and at each index, check the difference between the value of the index and the given value. If the array includes the difference value, return that value and the value at the index being looped through as an array. Pro: Does not take up space and faster fun time.
+
+![](./images/challenge-18.jpg)
+
+# Hashtables
+
+Hashtables are a data structure that utilize key value pairs. This means every Node or Bucket has both a key, and a value.
+
+The basic idea of a hashtable is the ability to store the key into this data structure, and quickly retrieve the value. This is done through what we call a hash. A hash is the ability to encode the key that will eventually map to a specific location in the data structure that we can look at directly to retrieve the value.
+
+Since we are able to hash our key and determine the exact location where our value is stored, we can do a lookup in an O(1) time complexity. This is ideal when quick lookups are required.
+
+## Challenge
+
+Implement a Hashtable with the following methods:
+
+add: takes in both the key and value. This method should hash the key, and add the key and value pair to the table, handling collisions as needed.
+get: takes in the key and returns the value from the table.
+contains: takes in the key and returns a boolean, indicating if the key exists in the table already.
+hash: takes in an arbitrary key and returns an index in the collection.
+
+## Approach & Efficiency
+
+I set up the hashtable to store an array of objects starting with a length of 100. First it checks if the given key is a string and converts it into the sum of the ascii code of each letter. Then it multiplies the value by 599 and returns the modulus of 100 (length of data) as the index.
+
+## API
+
+`hash(key)` -> takes in value and returns an index
+`get(key)` -> gets the value at the given key
+`contains(key)` -> returns boolean based of whether or not key exists
+`add(key,value)` -> adds key value pair to table
+
+# 19. Find Tree Path
+
+Find the path between two values
+
+## Challenge
+
+Given a Binary tree and two values (A and B). Return a linked list representing the Path from A to B
+
+## Approach & Efficiency
+
+Use depth first method to traverse the tree. First find the starting value then add nodes to the linked list until the end value is found.
+
+![](./images/challenge-19.jpg)
+
+# 20. Find max and min ones - collaborated with Chris Kozlowski
+
+Find the row in a 2D array with the most and least number of 1s.
+
+## Challenge
+
+Given a 2D array where the rows are sorted and contain only 0 and 1. Return the index of the row with the biggest amount of zeroes, and the index of the row with the biggest amount of zeroes.
+
+## Approach & Efficiency
+
+We looped through the array and for each array, within that we made a while loop and performed a binary search on the sub array kept track of the min and max indexes, the high and low, as well as the resulting row.
+
+![](./images/challenge-20.jpg)
+
+# 21. El Salvador Flag - collaborated with Morgana, Jesse, and Joey
+
+Sort an array to resemble the El Salvador Flag
+
+## Challenge
+
+Given an array of any even number of blues and whites and one shield, rearrange the array so that it resembles the El Salvador flag: [blue, white, shield, white, blue].
+
+## Approach & Efficiency
+
+We declared the variables: Center (center point of array), leftBlueIndex, rightBlueIndex,blueCount, and index. In a while loop, we checked to see if the item at index is 'shield'. If it is, swap that to the center. Next we check if the value is blue. If it is, and blue count is odd, swap the value with rightBlueIndex. If it is odd, swap it with leftBlueIndex. If it is white, just incrememnt i. In the end return the array.
+
+![](./images/challenge-21.jpg)
+
+# 22. Chess Game
+
+## Challenge
+
+Check if a given chess board (given as a 2D Array) is in a checkmate state.
+
+## Approach & Efficiency
+
+Locate the king by looping through the 2D array, then call the knight and rook functions to see if the they can capture the king. I mapped out all the possible points the knight and rook can move in their individual functions.
+
+![](./images/challenge-22.jpg)
+
+# 22. Dfs Graph Recursion
+
+## Challenge
+
+Create a function that accepts an adjacency list as a graph, and conducts a depth first traversal. Without utilizing any of the built-in methods available to your language, return a collection of nodes in their pre-order depth-first traversal order.
+
+## Approach & Efficiency
+
+Create a set and a current vertex which keeps track of the current values of the adjacency list. Set the base case to where the set has seen all the values of the list. Perform preorder by adding the current value to the set, then call the function again on each of the vertices.
+
+![](./images/challenge-23.jpg)
+
+# 22. Graph Islands
+
+## Challenge
+
+Given a graph, check if it has any islands. Return true if it does and false if it doesn't.
+
+## Approach & Efficiency
+
+Make an array of the keys and set a variable equal to an empty array for the visited vertices. For each of the values in the graph, return false if any of them do not have values. Starting from the beginning of the adjacency list, first add the value of the key to the visited array then for each of the nodes in the linked list, add the current node value and call the function again to check the value of that key. In the end, compare the length of the keys array and the visited array and return true or false depending on if the lengths match.
+
+![](./images/challenge-24.jpg)
